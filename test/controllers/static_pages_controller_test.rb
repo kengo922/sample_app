@@ -16,7 +16,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get static_pages_home_url #viewに遷移させるヘルパー
     assert_response :success  # success＝成功
     #assert_selectメソッドでは、特定のHTMLタグが存在するかどうかをテストする（この種のアサーションメソッドはその名から「セレクタ」と呼ばれている）
-    assert_select "title", "Home | #{@base_title}"
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
 
   test "should get help" do
